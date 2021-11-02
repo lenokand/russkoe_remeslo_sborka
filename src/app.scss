@@ -1,51 +1,627 @@
-@import '/node_modules/bootstrap/scss/bootstrap.scss';
-@import '/node_modules/bootstrap-icons/font/bootstrap-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
 
-.header {
-    .nav-link {
-        padding: .5rem 2rem !important;
-    }
-    .cart-informer {
-        .badge {
-            font-size: .67rem;
-            position: absolute;
-            transform: translate(-15px, 3px);
-        }
-    }
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.product {
-    &-image {
-        height: 200px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+
 }
 
-.add-to-cart-button {
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-family: 'PT Sans Caption', sans-serif;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+
+}
+
+a {
+  text-decoration: none;
+  font-family: 'PT Sans Caption', sans-serif;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+.container {
+  max-width: 1520px;
+  margin: auto;
+
+}
+
+header {
+  // background-image: url('public/products/darck_bg.png')  ;
+  // background-repeat: no-repeat;
+  // background-position: right 0 top;
+  // border-bottom: 1px solid #E6E6E6;
+  position: relative;
+
+  .darck_bg {
+    position: absolute;
+    right: 0;
+    // left: calc(100vw - 900px);
+
+    top: 0;
+    z-index: -1;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    padding-top: 10px;
+    padding-bottom: 7px;
+  }
+
+  nav {
+    flex-grow: 1;
+    max-width: 900px;
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .menu-item {
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 27px;
+    flex-grow: 1;
+    color: #2D2D2D;
     display: flex;
     align-items: center;
-    &::before {
-        display: block;
-        content: 'Add to cart'
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+
+    align-self: stretch;
+    padding-left: 35px;
+    padding-right: 35px;
+    transition: ease 300ms;
+
+
+
+    &.active {
+      background: #DCC96C;
     }
-    &::after {
-        font-family: bootstrap-icons;
-        display: block;
-        margin-left: 1rem;
-        font-size: 1.25em;
-        content: '\f23e'
+
+    &:hover {
+      background: #343434;
+      color: #FFFFFF;
     }
-    &:disabled::before {
-        display: block;
-        content: 'Already in cart'
+  }
+}
+
+.phones {
+  align-self: center;
+}
+
+.phones a {
+  font-weight: bold;
+  font-size: 29px;
+  line-height: 161.69%;
+  text-align: right;
+  color: #FFFFFF;
+}
+
+.schedule {
+  font-size: 19px;
+  line-height: 161.69%;
+  text-align: right;
+  color: #FFFFFF;
+}
+
+body {
+  background: url('public/products/background.png');
+}
+
+button,
+.order-button {
+  filter: drop-shadow(0px 4px 4px rgba(100, 85, 14, 0.5));
+  border: none;
+  outline: none;
+  background: #DCC96C;
+  border-radius: 2px;
+  // padding: 22px 0;
+  height: 70px;
+  width: 358px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 27px;
+  cursor: pointer;
+  color: #2D2D2D;
+  transition: ease .3s;
+
+  &:hover {
+    // color: #2D2D2D;
+    filter: none;
+  }
+
+  &:active {
+    background: #343434;
+    color: #FFFFFF;
+  }
+}
+
+.main-screen {
+
+  // border-top: 1px solid #E6E6E6;
+  .title {
+    font-family: Prosto One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 41px;
+    line-height: 54px;
+
+    color: #2D2D2D;
+    margin-bottom: 22px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+    line-height: 36px;
+
+    color: #2D2D2D;
+    margin-bottom: 57px;
+
+  }
+
+  .container {
+    padding-top: 72px;
+    position: relative;
+  }
+
+  .title-block {
+
+    width: 994px;
+    padding: 92px 250px 72px 94px;
+    background: rgba(247, 249, 251, 0.5);
+    backdrop-filter: blur(9px);
+    border-radius: 2px;
+    margin-bottom: 42px;
+  }
+
+  form {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    // label{
+    //     // content:"111";
+    //     display: block;
+    //     width: 50px;
+    //     height: 100%;
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     background: #F7F9FB;
+    //     border: 1px solid #CCCCCC;
+    // }
+    input {
+      background: #F7F9FB;
+      border: 1px solid #CCCCCC;
+      text-align: center;
+      outline: none;
+      height: 70px;
+      width: 342px;
+
+
+      &::placeholder {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 160.19%;
+        text-align: center;
+        color: #8C8C8C;
+
+      }
+
+      margin-right: 12px;
+
+
     }
-    &:disabled::after {
-        font-family: bootstrap-icons;
-        display: block;
-        margin-left: 1rem;
-        font-size: 1.25em;
-        content: '\f239'
+
+
+  }
+
+  .main-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .advantage {
+    display: flex;
+    align-items: center;
+    margin-right: -15px;
+    margin-left: -15px;
+
+
+
+
+  }
+
+  .advantage-item {
+    margin-right: 15px;
+    margin-left: 15px;
+    -webkit-perspective: 1200;
+    perspective: 1200;
+    -moz-transform: perspective(1200px);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+
+    &:hover .flipper {
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      transform: rotateY(180deg);
     }
+
+  }
+
+  .flipper {
+    width: 360px;
+    height: 211px;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: .7s linear;
+    -moz-transition: .7s linear;
+    -o-transition: .7s linear;
+    transition: .7s linear;
+  }
+
+  .front,
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .front {
+    width: 360px;
+    height: 211px;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-top: 33px;
+    padding-bottom: 21px;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FAFAFA;
+    border: 1px solid #C9C9C9;
+    box-sizing: border-box;
+    box-shadow: -13px -12px 24px rgba(32, 32, 32, 0.06);
+    border-radius: 5px;
+
+
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+
+
+    img {
+      margin-bottom: 22px;
+    }
+
+    .advantage-title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 31px;
+      text-align: center;
+
+      color: #2D2D2D;
+    }
+
+  }
+
+  .back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #F9E59D;
+    border: 1px solid #C9C9C9;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #2D2D2D;
+    text-align: center;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+
+  }
+}
+
+.usage {
+  margin-top: 80px;
+
+  .title {
+    font-family: Prosto One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 47px;
+
+    color: #2D2D2D;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .usage-content {
+    display: flex;
+
+    .left-part {
+      margin-right: 30px;
+      position: relative;
+
+      .left-sign {
+        position: absolute;
+        left: 28px;
+        bottom: 37px;
+        font-family: PT Sans Caption;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 31px;
+        /* identical to box height */
+
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+      }
+    }
+
+    .right-part {
+      display: flex;
+      flex-direction: column;
+
+      .top {
+        margin-bottom: 10px;
+      }
+
+      .top,
+      .bottom {
+        position: relative;
+      }
+
+      .top-sign,
+      .bottom-sign {
+        position: absolute;
+        font-family: PT Sans Caption;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 31px;
+        /* identical to box height */
+
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+      }
+
+      .top-sign {
+        left: 30px;
+        bottom: 39px;
+      }
+
+      .bottom-sign {
+        left: 30px;
+        bottom: 39px;
+      }
+
+    }
+
+  }
+
+}
+
+.installation {
+  margin-top: 80px;
+  padding-top: 56px;
+  padding-bottom: 66px;
+  background: url('public/products/bg.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  .container {
+    display: flex;
+  }
+
+  .left {
+    flex-basis: 120%;
+  }
+
+  .right {
+    margin-left: 30px;
+  }
+
+  .instalation-title {
+    font-family: Prosto One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 47px;
+    /* identical to box height */
+
+
+    color: #2D2D2D;
+    margin-bottom: 54px;
+  }
+
+  .instalation-content {
+    font-family: PT Sans Caption;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    /* or 162% */
+
+
+    color: #2D2D2D;
+  }
+}
+
+
+.order {
+  margin-top: 80px;
+  background-image: url("public/products/bgorder.png") ;
+  background-position: top 16px left ;
+  background-repeat: repeat-x;
+
+
+  .container {
+    display: flex;
+  }
+
+  .order-offer {
+    font-family: PT Sans Caption;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 100%;
+    /* or 24px */
+
+
+    color: #2D2D2D;
+    margin-bottom: 45px;
+  }
+
+  .colored_txt {
+
+    font-family: PT Sans Caption;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 41px;
+    line-height: 100%;
+    /* or 41px */
+
+
+    color: #DCC96C;
+  }
+
+  .title {
+    font-family: Prosto One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 47px;
+
+    color: #2D2D2D;
+    margin-bottom: 52px;
+  }
+  .left{
+    padding-left: 150px;
+    margin-right: 130px;
+  }
+  .right{
+    padding-top: 110px;
+  }
+
+}
+
+.clients{
+  padding-top: 56px;
+  background-image: url("public/products/bg-clients.png");
+  .title{
+    font-family: Prosto One;
+font-style: normal;
+font-weight: normal;
+font-size: 38px;
+line-height: 47px;
+color: #FFFFFF;
+text-align: center;
+margin-bottom: 21px;
+
+  }
 }

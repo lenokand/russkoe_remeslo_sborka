@@ -6,47 +6,211 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="stylesheet" href="bundle.css">
+
+
+    <!-- <link rel="stylesheet" href="bundle.css"> -->
 </head>
 
-<body class="bg-light">
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary header shadow-sm">
+    <header>
         <div class="container">
-            <a class="h2 text-decoration-none text-white" href="#">eStore</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-pills mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/" data-route>Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cart" data-route>Cart</a>
-                    </li>
-                </ul>
-                <div class="dropdown ms-lg-5 cart-informer" id="cart-informer">
-                    <a class="btn btn-secondary dropdown-toggle btn-lg" href="#" role="button" id="dropdownMenuLink"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-cart"></i>
-                        <span class="badge bg-primary rounded-pill"></span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-lg-end dropdown-menu-dark bg-secondary" aria-labelledby="dropdownMenuLink"></ul>
+            <div class="logo">
+                <a href="#">
+                    <img src="products/logo.png" alt="">
+                </a>
+
+            </div>
+            <nav>
+                <a href="" class="menu-item active">
+                    Пример использования
+                </a>
+                <a href="" class="menu-item">
+                    Как работаем
+                </a>
+                <a href="" class="menu-item">
+                    Отзывы
+                </a>
+                <a href="" class="menu-item">
+                    Контакты
+                </a>
+            </nav>
+            <div class="phones">
+                <a href="tel:+7 (495) 104 85 95" class="phone-item">+7 (495) 104 85 95</a>
+                <div class="schedule">
+
+                    ежедневно с 09:00 до 22:00
                 </div>
             </div>
         </div>
-    </nav>
 
-    <div class="container bg-white shadow-sm my-3 py-3 rounded">
-        <div class="row g-3" id="route-view"></div>
-    </div>
+        <img class="darck_bg" src="products/darck_bg.png" alt="">
+
+    </header>
+
+    <section class="main-screen">
+        <div class="container">
+            <div class="title-block">
+                <div class="title">Готовые стеновые панели
+                    с дизайнерским решением!</div>
+                <div class="subtitle">
+                    Настенные панели — удачный тандем надежности, простоты и красоты!
+                </div>
+                <form action="">
+                    <!-- <label for="telephone_main"></label> -->
+                    <input id="telephone_main" type="text" placeholder="Номер телефона">
+                    <button type="submit">Получить консультацию</button>
+
+                </form>
+            </div>
+            <div class="advantage">
+                <div class="advantage-item">
+                    <div class="flipper">
+                        <div class="front">
+                            <img class="darck_bg" src="products/manufacture1.png" alt="">
+
+                            <div class="advantage-title">
+                                Креативный подход <br>
+                                к реализации проекта
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="back-title">Понимание задачи заказчика</div>
+                            <br>
+                            <div class="back-text">
+                                Креативный подход <br>
+                                к реализации проекта
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="advantage-item">
+                    <div class="flipper">
+                        <div class="front">
+                            <img class="darck_bg" src="products/manufacture2.png" alt="">
+
+                            <div class="advantage-title">
+                                Выполним любую <br> сложность отделки
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="back-title">Понимание задачи заказчика</div>
+                            <br>
+                            <div class="back-text">
+                                Выполним любую <br> сложность отделки
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="advantage-item">
+                    <div class="flipper">
+                        <div class="front">
+                            <img class="darck_bg" src="products/manufacture3.png" alt="">
+
+                            <div class="advantage-title">
+                                Современное <br> производство
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="back-title">Понимание задачи заказчика</div>
+                            <br>
+                            <div class="back-text">
+                                Гарантия качества
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <img class="main-image" src="products/main-img.png" alt="">
+
+        </div>
+
+    </section>
+
+    <section class="usage">
+        <div class="container">
+            <div class="title">
+                Используйте стеновые панели в различных местах
+            </div>
+            <div class="usage-content">
+                <div class="left-part">
+                    <img src="products/usage1.png" alt="">
+                    <div class="left-sign">
+                        Отделка стен
+                    </div>
+                </div>
+                <div class="right-part">
+                    <div class="top">
+                        <img src="products/usage2.png" alt="">
+                        <div class="top-sign">
+                            Обивке потолков
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <img src="products/usage3.png" alt="">
+                        <div class="bottom-sign">
+                            Визуальном зонировании пространства
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <section class="installation">
+        <div class="container">
+            <div class="left">
+                <img src="products/instal.png" alt="">
+            </div>
+            <div class="right">
+                <div class="instalation-title">
+                    Легкая установка
+                </div>
+                <div class="instalation-content">
+                    Безусловно, укрепление и развитие внутренней структуры влечет за собой процесс внедрения и модернизации
+                    системы обучения кадров, соответствующей насущным потребностям.
+                    <br>
+                    Принимая во внимание показатели успешности, выбранный нами инновационный путь обеспечивает актуальность
+                    новых принципов формирования материально-технической и кадровой базы.
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="order">
+        <div class="container">
+            <div class="left">
+                <img src="products/women.png" alt="">
+            </div>
+            <div class="right">
+                <div class="title">
+                    Узнайте какой вид панелей подойдет именно вам!
+                </div>
+                <div class="order-offer">
+                    Пройдите квиз и <br>
+                <span class="colored_txt">получите скидку в 17%</span>  на заказ и установку
+                </div>
+                <a href="#" class="order-button">Забронировать скидку</a>
+            </div>
+        </div>
+    </section>
+    <section class="clients">
+        <div class="container">
+            <div class="title">
+                Наши клиенты просто в восторге от результатов!
+            </div>
+        </div>
+    </section>
 
 </body>
 
