@@ -55,6 +55,12 @@ module.exports = {
             template: './src/html/contacts.html',
             inject: 'body'
         })
+        ,
+        new HtmlWebpackPlugin({
+            filename: 'product.html',
+            template: './src/html/product.html',
+            inject: 'body'
+        })
     ],
     module: {
         rules: [
