@@ -52,6 +52,8 @@ Swiper.use([Navigation, Pagination]);
 
 
 
+
+
   function fontSize() {
     if($(window).width() < 900){
 

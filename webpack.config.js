@@ -37,6 +37,24 @@ module.exports = {
             template: './src/html/example.html',
             inject: 'body'
         })
+        ,
+        new HtmlWebpackPlugin({
+            filename: 'work.html',
+            template: './src/html/work.html',
+            inject: 'body'
+        })
+        ,
+        new HtmlWebpackPlugin({
+            filename: 'reveiw.html',
+            template: './src/html/reveiw.html',
+            inject: 'body'
+        })
+        ,
+        new HtmlWebpackPlugin({
+            filename: 'contacts.html',
+            template: './src/html/contacts.html',
+            inject: 'body'
+        })
     ],
     module: {
         rules: [
