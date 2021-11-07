@@ -101,3 +101,22 @@ burger.addEventListener('click', function(){
 
 
 
+
+// галерея
+let topImg = document.querySelector('.product-block .left-part .swiper-top img')
+// let bottomImgs = document.querySelectorAll('.product-block .left-part .swiper-botom .img-block img')
+let bottomImgs = document.querySelectorAll('.product-block .left-part .swiper-botom .img-block')
+
+bottomImgs.forEach((imageblock) => {
+  // console.log(image.src)
+  imageblock.addEventListener( 'click', function(){
+
+    let imgSrc = imageblock.querySelector('img').src
+    topImg.setAttribute('src', imgSrc )
+
+    // console.log(imgSrc)
+
+  })
+
+} )
+
