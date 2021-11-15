@@ -137,8 +137,8 @@ header {
     display: flex;
     justify-content: space-between;
     // align-items: center;
-    padding-top: toRem(10);
-    padding-bottom: toRem(7);
+    // padding-top: toRem(10);
+    // padding-bottom: toRem(7);
   }
 
   nav {
@@ -265,7 +265,7 @@ button,
 
   .title-block {
 
-    width: tiRem(994);
+    width: toRem(994);
     padding: toRem(92) toRem(250) toRem(72) toRem(94);
     background: rgba(247, 249, 251, 0.5);
     backdrop-filter: blur(9px);
@@ -469,7 +469,14 @@ button,
     .left-part {
       margin-right: toRem(30);
       position: relative;
-
+      overflow: hidden;
+      img{
+        transition: ease 300ms;
+      }
+      &:hover img{
+        // width: 110%;
+        transform: scale(1.02);
+      }
       .left-sign {
         position: absolute;
         left: toRem(28);
@@ -490,14 +497,23 @@ button,
     .right-part {
       display: flex;
       flex-direction: column;
-
+      justify-content: space-between;
       .top {
         margin-bottom: toRem(10);
+        
       }
 
       .top,
       .bottom {
         position: relative;
+        overflow: hidden;
+        img{
+          transition: ease 300ms;
+        }
+        &:hover img{
+          // width: 110%;
+          transform: scale(1.02);
+        }
       }
 
       .top-sign,
@@ -1541,9 +1557,14 @@ footer {
 }
 
 @media screen and (max-width:900px) {
+  .main-screen .title-block{
+    width: 100%;
+  }
   header {
     position: static;
-
+    // .title-block{
+    //   width: 100%;
+    // }
     .container {
       display: none;
     }
@@ -1970,6 +1991,7 @@ body.show {
 
   .usage .usage-content .right-part .top {
     margin-bottom: 5px;
+    // overflow: hidden;
   }
 
   .installation {
