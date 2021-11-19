@@ -292,10 +292,11 @@ button,
     input {
       background: #F7F9FB;
       border: 1px solid #CCCCCC;
-      text-align: center;
+      // text-align: center;
       outline: none;
       height: toRem(70);
       width: toRem(342);
+      padding-left: 15px;
 
 
       &::placeholder {
