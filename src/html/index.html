@@ -11,6 +11,10 @@
     rel="stylesheet"
     href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
     <!-- <link rel="stylesheet" href="bundle.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+    />
 </head>
 
 <body>
@@ -211,7 +215,13 @@
     <section class="installation">
         <div class="container">
             <div class="left">
-                <img src="products/instal.png" alt="">
+                
+                <a href='https://www.youtube.com/watch?v=tYlh0JmozGI'  data-fancybox  class="popupbox-video " rel="group">
+                    <img src="products/instal.png" alt="">
+                    
+                
+                </a>
+                <!-- <img src="products/instal.png" alt=""> -->
             </div>
             <div class="right">
                 <div class="instalation-title">
@@ -432,12 +442,12 @@
                     <a href="#" class="img-block">
                         <img src="products/card1.png" alt="">
                     </a>
-                    
+                    <a href="product.html" class="name">
+                        Шпонированная из МДФ
+                    </a>
                     <form action="">
                         <div class="wrapper">
-                            <a href="product.html" class="name">
-                                Шпонированная из МДФ
-                            </a>
+                       
                             <div class="sign">
                                 Размеры
                             </div>
@@ -456,6 +466,7 @@
                             <div class="sign">
                                 Выбор цвета
                             </div>
+                            <input type="text" placeholder="RAL1" class="color-input">
                             <div class="color">
 
 
@@ -513,23 +524,124 @@
                         </div>
 
 
-                        <button>
-                            Рассчитать индивидуально
+                        <button type="submit">
+                            Отправить
                         </button>
 
-                    </form>
+                       
 
+                    </form>
+                    <div  class="order-button">
+                        Рассчитать индивидуально
+                    </div>
+                </div>
+                <div class="catalog-card">
+                    <a href="#" class="img-block">
+                        <img src="products/card1.png" alt="">
+                    </a>
+                    <a href="product.html" class="name">
+                        Шпонированная из МДФ
+                    </a>
+                    <form action="">
+                        <div class="wrapper">
+                       
+                            <div class="sign">
+                                Размеры
+                            </div>
+                            <div class="size">
+
+
+                                <label for="choice1"> <input type="radio" id="choice1" name="choice" value="500x500">
+                                    500x500</label>
+
+                                <label for="choice2"> <input type="radio" id="choice2" name="choice" value="500x500">
+                                    500x500</label>
+
+                                <label for="choice3"> <input type="radio" id="choice3" name="choice" value="500x500">
+                                    500x500</label>
+                            </div>
+                            <div class="sign">
+                                Выбор цвета
+                            </div>
+                            <input type="text" placeholder="RAL1" class="color-input">
+                            <div class="color">
+
+
+                                <div class="color-list">
+                                    <div class="wrapper">
+                                        <input type="radio" id="color1" name="color" value="Цвет (RAL1)" checked>
+                                        <label class="show-choise" for="color1">Цвет (RAL1)</label>
+                                        <label class="color-label" for="color1">
+                                            <div style="background: #C78300;"> </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="wrapper">
+                                        <input type="radio" id="color2" name="color" value="Цвет (RAL2)">
+                                        <label class="show-choise" for="color2">Цвет (RAL2)</label>
+                                        <label class="color-label" for="color2">
+                                            <div style="background: #805F3F;"> </div>
+                                        </label>
+                                    </div>
+                                    <div class="wrapper">
+                                        <input type="radio" id="color3" name="color" value="Цвет (RAL3)">
+                                        <label class="show-choise" for="color3">Цвет (RAL3)</label>
+                                        <label class="color-label" for="color3">
+                                            <div style="background: #554D46;"> </div>
+                                        </label>
+                                    </div>
+                                    <div class="wrapper">
+                                        <input type="radio" id="color4" name="color" value="Цвет (RAL4)">
+                                        <label class="show-choise" for="color4">Цвет (RAL1)</label>
+                                        <label class="color-label" for="color4">
+                                            <div style="background: #92D700;"> </div>
+                                        </label>
+                                    </div>
+
+
+
+
+
+
+                                </div>
+
+                                <!-- <div class="color-top">
+                                    <label class="show-choise" for="color1">Цвет (RAL1)</label>
+                                    <label class="show-choise" for="color2">Цвет (RAL2)</label>
+                                    <label class="show-choise" for="color3">Цвет (RAL3)</label>
+                                </div> -->
+
+
+                            </div>
+                            <div class="price">
+                                <div class="">Цена</div>
+                                <div class=""> от 34 000 Р</div>
+                            </div>
+
+                        </div>
+
+
+                        <button type="submit">
+                            Отправить
+                        </button>
+
+                       
+
+                    </form>
+                    <div  class="order-button">
+                        Рассчитать индивидуально
+                    </div>
                 </div>
                 <div class="catalog-card">
                     <a href="#" class="img-block">
                         <img src="products/card2.png" alt="">
                      </a>
-                   
+                     <a href="product.html" class="name">
+                        Шпонированная из МДФ
+                    </a>
                     <form action="">
                         <div class="wrapper">
-                            <a href="product.html" class="name">
-                                Шпонированная из МДФ
-                            </a>
+                            
                             <div class="sign">
                                 Размеры
                             </div>
@@ -548,6 +660,7 @@
                             <div class="sign">
                                 Выбор цвета
                             </div>
+                            <input type="text" placeholder="RAL1" class="color-input">
                             <div class="color">
 
 
@@ -604,23 +717,29 @@
 
                         </div>
 
-
-                        <button>
-                            Рассчитать индивидуально
+                        <button type="submit">
+                            Отправить
                         </button>
 
+                        
+
                     </form>
+                    <div class="order-button">
+                        Рассчитать индивидуально
+                    </div>
 
                 </div>
+
                 <div class="catalog-card">
                     <a href="#" class="img-block">
                     <img src="products/card3.png" alt="">
                 </a>
+                <a href="product.html" class="name">
+                    Шпонированная из МДФ
+                </a>
                     <form action="">
                         <div class="wrapper">
-                            <a href="product.html" class="name">
-                                Шпонированная из МДФ
-                            </a>
+                            
                             <div class="sign">
                                 Размеры
                             </div>
@@ -639,6 +758,7 @@
                             <div class="sign">
                                 Выбор цвета
                             </div>
+                            <input type="text" placeholder="RAL1" class="color-input">
                             <div class="color">
 
 
@@ -690,24 +810,27 @@
                             </div>
 
                         </div>
-
-
-                        <button>
-                            Рассчитать индивидуально
+                        <button type="submit">
+                            Отправить
                         </button>
 
-                    </form>
+                       
 
+                    </form>
+                    <div class="order-button">
+                        Рассчитать индивидуально
+                    </div>
                 </div>
                 <div class="catalog-card">
                     <a href="product.html" class="img-block">
                     <img src="products/card4.png" alt="">
                     </a>
+                    <a href="product.html" class="name">
+                        Шпонированная из МДФ
+                    </a>
                     <form action="">
                         <div class="wrapper">
-                            <a href="product.html" class="name">
-                                Шпонированная из МДФ
-                            </a>
+                           
                             <div class="sign">
                                 Размеры
                             </div>
@@ -726,6 +849,7 @@
                             <div class="sign">
                                 Выбор цвета
                             </div>
+                            <input type="text" placeholder="RAL1" class="color-input">
                             <div class="color">
 
 
@@ -778,12 +902,15 @@
                         </div>
 
 
-                        <button>
-                            Рассчитать индивидуально
+                        <button type="submit">
+                            Отправить
                         </button>
 
-                    </form>
 
+                    </form>
+                    <div class="order-button">
+                        Рассчитать индивидуально
+                    </div>
                 </div>
 
             </div>
@@ -955,6 +1082,7 @@
             </div>
         </div>
     </footer>
+<<<<<<< HEAD
     <!-- <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script> -->
 <!-- <script>
     $.fn.setCursorPosition = function(pos) {
@@ -972,6 +1100,9 @@ $("tel").click(function(){
   $(this).setCursorPosition(3);
 }).mask("+7(999) 999-9999");
 </script> -->
+=======
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+>>>>>>> refs/remotes/origin/main
 </body>
 
 </html>
