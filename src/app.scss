@@ -900,6 +900,7 @@ button,
     // padding-left:  -15px;
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
 
 
   }
@@ -913,13 +914,14 @@ button,
   .catalog-card {
     margin-right: 15px;
     margin-left: 15px;
+    margin-bottom: 10px;
     background: #FAFAFA;
     border: 1px solid #C9C9C9;
     box-sizing: border-box;
     box-shadow: -18px -16px 15px rgba(32, 32, 32, 0.03);
     border-radius: 5px;
     padding-top: toRem(23);
-    width: 25%;
+    width: calc(25% - 30px);
     display: flex;
     flex-direction: column;
     align-items: center;
