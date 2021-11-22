@@ -253,7 +253,8 @@
                     Пройдите квиз и <br>
                     <span class="colored_txt">получите скидку в 17%</span> на заказ и установку
                 </div>
-                <a href="#" class="order-button">Забронировать скидку</a>
+                <a class="order-button" data-fancybox="" data-touch="false" href="#callback-modal">Забронировать скидку</a>
+                
             </div>
         </div>
     </section>
@@ -520,10 +521,15 @@
                                 <div class="">Цена</div>
                                 <div class=""> от 34 000 Р</div>
                             </div>
-
+                            <div class="sign">
+                                Как вас зовут?
+                            </div>
+                            <input class="input_modal" type="text" name="name" required> 
+                            <div class="sign">Номер телефона</div>
+                            <input class="input_modal tel" type="tel" name="telephone" required>
                         </div>
 
-
+                        
                         <button type="submit">
                             Отправить
                         </button>
@@ -1045,7 +1051,25 @@
 
         </div>
     </section>
+    <div id="callback-modal">
+       <div class="title">
+        У вас есть вопросы?
+       </div>
+       <div class="subtitle">
+        Мы бесплатно проконсультируем <br> вас по любым вопросам
+       </div>
+       <form action="" method="POST">
+            <div class="sign">
+                Как вас зовут?
+            </div>
+            <input class="input_modal" type="text" required> 
+            <div class="sign">Номер телефона</div>
+            <input class="input_modal tel" type="tel" required>
 
+            <button class="order-button">Забронировать скидку</button>
+            <label ><input type="checkbox" checked="checked" required> Я согласен с <a href="#">политикой конфиденциальности</a>  </label>
+       </form>
+    </div>
     <footer>
         <div class="top-footer">
             <div class="container">

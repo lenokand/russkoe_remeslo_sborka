@@ -103,6 +103,42 @@ burger.addEventListener('click', function(){
 })
 
 
+let step = 6; // Размер этих самых порций. Чтобы легко можно было поменять.
+let prod = document.querySelectorAll('.reveiw-main .container');
+
+for( let i = 0; i < prod.length; i++ ){
+  let product = prod[i];
+  let li = product.querySelectorAll('.reveiw-main .review-card');
+  for( let j = 0; j < step; j++ ){//Для начала перебираем - показываем первые step пунктов.
+    // Но только если такие существуют
+    if( li[j] ){ li[j].classList.add('show') }
+  }
+  
+  let more = document.querySelector(' .more');
+  
+  more.addEventListener('click', function(){
+    let show = product.querySelectorAll('.show');
+    let next = show[show.length-1].nextElementSibling;
+    // Достали следующий элемент ПОСЛЕДНЕГО элемента show. 
+    //Предполагается, что никогда не будет добавлено полностью пустых ul.
+    let it = 0;
+    while( it < step ){
+      if( next ){
+        next.classList.add('show');
+        next = next.nextElementSibling;
+        it++;
+      } else {
+        more.classList.add("stop")
+        break; 
+        // Если следующего элемента не оказалось - выключаем цикл.
+      }
+    }
+  });
+}
+
+
+
+
 
 
 
